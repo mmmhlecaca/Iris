@@ -1,4 +1,3 @@
-
 # Iris
 
 Iris is an Immediate mode GUI Library for Roblox, Based on [Dear ImGui](https://github.com/ocornut/imgui). It solves the same problems as Dear ImGui: providing a simple and bloat-free UI system, designed for visualisation and debugging. It is fast, portable, and self-contained (no external dependencies).
@@ -12,13 +11,10 @@ Demo Place: https://rblx.games/7245022703
 
 ### Usage
 
-Iris can be installed as a [package](https://wally.run/package/sirmallard/iris) using [Wally](https://wally.run/), as an rbxm file from the [latest GitHub release](https://github.com/SirMallard/Iris/releases/latest) or building from [source](https://github.com/SirMallard/Iris/archive/refs/heads/main.zip). You can import the rbxm into any roblox project, and begin creating UI in any client side script. No external dependences are needed. Iris can be used under any kind of Roblox UI, including PlayerGui, CoreGui, BillboardGui, SurfaceGui, and PluginGui.
-
 Heres a basic Example:
 
 ```lua
-local StarterPlayerScripts = game.StarterPlayer.StarterPlayerScripts
-local Iris = require(StarterPlayerScripts.Client.Iris).Init()
+local Iris = loadstring(game:HttpGet("https://raw.githubusercontent.com/mmmhlecaca/Iris/refs/heads/main/Iris.wax.lua"))().Init(game.CoreGui)
 
 Iris:Connect(function()
     Iris.Window({"My First Window!"})
@@ -36,8 +32,7 @@ end)
 And a more complex Example:
 
 ```lua
-local StarterPlayerScripts = game.StarterPlayer.StarterPlayerScripts
-local Iris = require(StarterPlayerScripts.Client.Iris).Init()
+local Iris = loadstring(game:HttpGet("https://raw.githubusercontent.com/mmmhlecaca/Iris/refs/heads/main/Iris.wax.lua"))().Init(game.CoreGui)
 
 Iris:Connect(function()
     -- use a unique window size, rather than default
@@ -118,3 +113,4 @@ Inspriation and design: [Omar Cornut](https://www.miracleworld.net/), [Evaera](h
 
 Thanks!
 <meta name="google-site-verification" content="Ito4GceH5YJJXReIhx9JMqN0YEDdKePHaylk8H3-9Oo" />
+
